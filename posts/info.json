@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "log",
+    "title": "This is my Log!",
+    "date": "2026-07-29",
+    "description": "Added Log to portfolio",
+    "tags": ["log", "update"],
+    "modified": ""
+  },
+  {
+    "slug": "month-2607",
+    "title": "Progress in July, 2026",
+    "date": "2026-08-02",
+    "description": "July, 2026",
+    "tags": ["progress"],
+    "modified": ""
+  }
+]

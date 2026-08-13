@@ -1,0 +1,312 @@
+routes:
+  home: Home
+  labs: Labs
+  projects: Projects
+  research: Research
+  log: Log
+  problem: Problem
+  honors: Honors
+
+research:
+  - slug: colonel-blotto
+    number: "R-01"
+    category: Math & Research
+    title: Optimal Solution of Colonel Blotto Game Variant
+    tagline: Geometric Analysis & Game-Theoretic Optimization
+    summary: >
+      We analyzed the Continuous Colonel Blotto Game using geometric and optimization
+      techniques to derive the optimal troop allocation conditions. We categorized the
+      cases into P-Case, C-Case, and Weighted P-Case, and verified the COBYLA-based
+      approximate solutions and existing conjectures.
+    takeaway: Game theory research combining geometry and optimization
+    role: Research design, mathematical proof, algorithm implementation, experimental analysis
+    period: 2025-1
+    status: Completed
+    tags:
+      - Game Theory
+      - Optimization
+      - Geometry
+      - COBYLA
+      - Continuous Optimization
+      - Mathematics
+    links:
+      - - Google Drive
+        - https://drive.google.com/drive/folders/1y_Cb6BViGLi11OU61dTZjWNlAW7ry84Y
+    details:
+      - - Goal
+        - >
+          Sought to analyze how the optimal troop distribution is determined in the
+          Continuous Colonel Blotto Game Variant and mathematically verify the
+          validity and generalizability of existing guesses.
+      - - Process
+        - >
+          Geometric analysis was performed using Barycentric Coordinate,
+          and the geometric probability were derived using dilogarithm and dominated
+          convergence theorem. In complex cases, approximate solutions were obtained using
+          Rust/Python-based brute force and COBYLA optimization.
+      - - Conclusion
+        - >
+          Derived the geometric probability. The optimal solution for m=3 was derived for C-Case,
+          and the COBYLA-based approximate optimal solution was calculated for m=4~6.
+
+  - slug: wythoff
+    number: "R-02"
+    category: Math & Research
+    title: Restricted Variant of Wythoff's Game under mx^n+k
+    tagline: The Definition and Analyzation
+    summary: A Restricted Variant and Analyzation of Wythoff's Game under mx^n+k
+    takeaway: Define and analyze a generalized Wythoff's Game and derive P-position structures through mathematical proof and computational investigation
+    role: Game definition, P-position characterization and proof, computational simulation and visualization
+    period: 2025-2
+    status: Completed
+    tags:
+      - Wythoff
+      - Game Theory
+    links: []
+    details:
+      - - Goal
+        -
+          >
+          Define a generalized P(x)-Wythoff's Game in which the minimum number of removable stones depends on the size of the other stack,
+          and determine the P-position sets for the cases P(x) = x^n + 1 and P(x) = nx + k.
+      - - Process
+        -
+          >
+          The P(x)-Wythoff's Game was defined and its correspondence with rook movements on a chessboard was established.
+          P-position sets were then constructed and proved using functions and set definitions.
+          For x^n + 1, the P-position structure was generalized for n > 1, while for nx + k, the P-position was determined for 1 ≤ k ≤ n.
+          Computational simulations were additionally used to investigate and visualize the P-positions and to formulate conjectures for k > n.
+      - - Conclusion
+        -
+          >
+          The P-position sets were completely characterized for x^n + 1 (n > 1) and nx + k (1 ≤ k ≤ n).
+          The boundary of the P-position region for x^n + 1 was shown to be closely related to
+          y = x^n + √[n]{x}, while computational experiments for k > n led to several conjectures
+          concerning the structure and periodic behavior of the P-position set.
+
+  - slug: gravity-transform
+    number: "R-03"
+    category: Math & Research
+    title: Gravity Transformations on Regular n-Polygon-Based Lattices
+    tagline: The Definition and Periodicity
+    summary: The study on the Definition and Periodicity of Gravity Transformations on Regular n-Polygon-Based Lattices
+    takeaway: Design and prove an independent mathematical model combining geometry and group theory
+    role: Grid definition, theorem proof, algorithm and visualization implementation
+    period: 2026-1
+    status: Completed
+    tags:
+      - Geometry
+      - Group Theory
+      - D_n
+      - Dynamical Systems
+      - Mathematics
+    links:
+      - - Google Drive
+        - https://drive.google.com/drive/folders/1o6csVjGBHo8HNyxLqE2fsg81Pk0cDead
+    details:
+      - - Goal
+        - >
+          TODO
+      - - Process
+        - >
+          The regular polygonal lattice and the gravity transformation for regular polygonal lattice were defined,
+          and the trajectory, symmetry structure that appeared during the transformation process were analyzed
+          using coordinate geometry and the dihedral group (D_n).
+      - - Conclusion
+        - >
+          We mathematically proved the periodicity and symmetry of the transformation, built
+          related theorems and algorithms, and presented a theory that can be extended to
+          general n-gonal lattices.
+
+projects:
+  - slug: crime-predict
+    number: "P-01"
+    category: DS
+    title: Cybercrime Prediction
+    tagline: Cybercrime Rate Prediction & Local Law Analysis
+    summary: >
+      Used public data and machine learning to predict regional cybercrime rates and
+      analyzed the effectiveness of local laws based on the Modified Z-score.
+    takeaway: Research experience ranging from data analysis to predictive modeling and policy interpretation
+    role: Data collection/preprocessing, model design, prediction and policy analysis
+    period: 2026-1
+    status: Completed
+    tags:
+      - Python
+      - Pandas
+      - Scikit-learn
+      - Machine Learning
+      - Data Analysis
+    links:
+      - - Google Drive
+        - https://drive.google.com/drive/folders/1ppJquPtDJS_Oq8Q2KkxlwHUIEiFGS7g6
+      - - Google Colab
+        - https://colab.research.google.com/drive/1HCisxvDJyjpjZlRPCVvCVOZ6Sa_lG0yZ
+    details:
+      - - Model
+        - >
+          Built a prediction model based on Linear Regression, Ridge Regression
+          using various variables such as cyber crime rate, Internet usage rate,
+          number of CVEs, and purchase rate.
+      - - Analysis
+        - >
+          By analyzing the difference between predicted and actual crime rates, we detected
+          abnormal areas and interpreted their relationship with local laws.
+      - - Significance
+        - >
+          This is a research project that connects data science and solving social problems
+          by deriving not only data-based predictions but also policy implications.
+
+  - slug: mathgm
+    number: "P-02"
+    category: Web & Apps
+    title: MathGM
+    tagline: BasketballGM-inspired Math Progress Simulator
+    summary: >
+      A BasketballGM-inspired web application where real-world study and problem solving
+      translate into player development, seasons, and career progression.
+    takeaway: Designed a full-stack gamification system that connects academic activity with persistent simulation mechanics.
+    role: Designed the game system, implemented the frontend and backend, and built the progression, save, and simulation logic.
+    period: 2026
+    status: In Progress
+    tags:
+      - JavaScript
+      - Game
+      - Gamification
+      - Education
+      - Web
+    links:
+      - - GitHub
+        - https://github.com/TakaSoro/MathGM
+    details:
+      - - Core Idea
+        - >
+          Transforms real study activities such as solving problems, completing research, and
+          studying topics into player attributes, experience, and career progression within a
+          BasketballGM-inspired management simulation.
+      - - Implementation
+        - >
+          Developed a responsive web application with persistent save data, player progression,
+          achievements, season simulation, statistics, and dashboard interfaces inspired by
+          sports management games.
+      - - Significance
+        - >
+          Explores how long-term motivation can be improved by combining educational progress
+          with game design, turning measurable learning into meaningful in-game rewards instead
+          of relying on traditional productivity trackers.
+
+  - slug: readme
+    number: "P-03"
+    category: AI
+    title: Readmify
+    tagline: "AI-powered GitHub README generation"
+    summary: "A developer tool that analyzes code repositories and generates polished, project-aware README files with the help of AI."
+    takeaway: "Exploring how structured code analysis and AI can turn a repository into useful technical documentation."
+    role: "Architecture · Code Analysis · AI Integration"
+    period: 2026
+    status: In Progress
+    tags:
+    - AI
+    - Code Analysis
+    - GitHub
+    links:
+      - - GitHub
+        - https://github.com/TakaSoro/Readmify
+    details:
+    - - Repository Analysis
+      - Analyzes individual source files and combines their summaries into a structured repository report.
+    - - AI Documentation
+      - Uses local AI models to transform repository information into a coherent GitHub README.
+
+  - slug: planned
+    number: "P-04"
+    category: DevTool
+    title: Planned
+    tagline: ""
+    summary: ""
+    takeaway: ""
+    role: ""
+    period: 2026
+    status: Planned
+    tags:
+      - ""
+    links: []
+    details:
+      - - ""
+        - ""
+
+labs:
+  - slug: mvp-predict
+    number: "L-01"
+    category: DS
+    title: NBA MVP Prediction
+    tagline: Machine learning model for award voting
+    summary: >
+      Collects and preprocesses NBA player and team data, and uses various statistical
+      data and machine learning models to predict the MVP ranking.
+    takeaway: Build an MVP Prediction Model Based on Seasonal Statistics
+    role: Data Collection, Feature Engineering, Model Development, and Evaluation
+    period: 2026
+    status: Completed
+    tags:
+      - Python
+      - Pandas
+      - XGBoost
+      - Machine Learning
+    links: []
+    details:
+      - - Core Idea
+        - >
+          Scraped NBA player and team statistics from Basketball Reference, and trained XGBoost
+          model to predict the league MVP.
+      - - Implementation
+        - >
+          Built a complete pipeline covering data collection, preprocessing, feature engineering,
+          model training, hyperparameter optimization, cross-validation, and prediction analysis
+          using XGBoost.
+      - - Outcome
+        - >
+          Compared model predictions with historical MVP results to evaluate feature importance,
+          identify influential performance data, and analyze how player statistics and team
+          success affect MVP voting.
+
+home:
+  selection:
+    - colonel-blotto
+    - crime-predict
+    - mathgm
+  data:
+    - label: Research
+      title: Math, CS, DS
+      desc: Colonel Blotto Game, Cybercrime Prediction
+    - label: PS Problems
+      title: 1 Authored · 3 Reviewed
+      desc: SciOI, SciCom Mini Contest
+
+problem:
+  contests:
+    - - 2025.12
+      - SciOI 2025
+      - Reviewer
+      - 3 Reviewed
+      - "#/setting"
+    - - 2026.07
+      - SciCom Mini Contest 1
+      - Setter
+      - 1 Authored
+      - https://doj.kr/ko/categories/school/sshs/minicontest/minicontest1
+  data:
+    - label: Setting
+      title: 1 Authored
+      desc: SciCom Mini Contest
+    - label: Review
+      title: 3 Reviewed
+      desc: SciOI
+
+honors:
+  timeline:
+    - - Middle School 2nd Grade  · 2023
+      - - - Seoul Science High School Center for Gifted Youth
+          - Math Research Silver
+
+defaultGroup: All

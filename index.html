@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TakaSoro's Portfolio</title>
+  <meta name="theme-color" content="#0f0f10" />
+  <meta property="og:title" content="TakaSoro's Portfolio" />
+  <meta property="og:description" content="Math · CS · DS" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked@18.0.7/lib/marked.umd.min.js"></script>
+  <script defer type="module" src="./js/main.js"></script>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-wrapper">
+      <a class="logo-group" href="#/home" aria-label="Home">
+        <span class="logo-badge">TS</span>
+        <span class="logo-text">
+          <strong>TakaSoro</strong>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Major Page">
+        <a href="#/home" data-route="home" route="home"><span class="nav-number">01</span>Home</a>
+        <a href="#/research" data-route="research" route="research"><span class="nav-number">02</span>Research</a>
+        <a href="#/projects" data-route="projects" route="projects"><span class="nav-number">03</span>Projects</a>
+        <a href="#/labs" data-route="labs" route="labs"><span class="nav-number">04</span>Labs</a>
+        <a href="#/log" data-route="log" route="log"><span class="nav-number">05</span>Log</a>
+        <a href="#/problem" data-route="problem" route="problem"><span class="nav-number">06</span>Problem</a>
+        <a href="#/honors" data-route="honors" route="honors"><span class="nav-number">07</span>Honors</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div id="app" class="content-area" tabindex="-1">
+      <section id="view" class="dynamic-view" aria-live="polite"></section>
+    </div>
+
+    <footer class="page-footer">
+      <div class="footer-wrapper">
+        <span>TakaSoro · Math · CS · DS</span>
+        <div class="social-links">
+          <a href="https://github.com/TakaSoro" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <noscript>
+    <div class="no-js-warning">
+      This is a JavaScript-based portfolio. Please enable JavaScript in your browser to view the content.
+    </div>
+  </noscript>
+</body>
+</html>
