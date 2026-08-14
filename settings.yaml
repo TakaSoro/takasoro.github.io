@@ -218,22 +218,28 @@ projects:
     - - AI Documentation
       - Uses local AI models to transform repository information into a coherent GitHub README.
 
-  - slug: planned
+  - slug: dayline
     number: "P-04"
-    category: DevTool
-    title: Planned
-    tagline: ""
-    summary: ""
+    category: Lifestyle
+    title: Dayline
+    tagline: A Journal Built Around Time
+    summary: A timeline-based journal for recording and revisiting daily experiences, thoughts, and progress.
     takeaway: ""
     role: ""
     period: 2026
-    status: Planned
+    status: In Progress
     tags:
-      - ""
+      - Journal
+      - Timeline
+      - Productivity
     links: []
     details:
-      - - ""
-        - ""
+    - - Core
+      - Write markdown entries, analyze them with Gemini to extract activities, and visualize your daily timeline.
+    - - Visualization
+      - Explore activity history through an interactive timeline.
+    - - Entries
+      - Create, edit, and browse daily journal entries.
 
 labs:
   - slug: mvp-predict
