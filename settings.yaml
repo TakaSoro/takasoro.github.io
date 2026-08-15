@@ -202,9 +202,9 @@ projects:
     tagline: "AI-powered GitHub README generation"
     summary: "A developer tool that analyzes code repositories and generates polished, project-aware README files with the help of AI."
     takeaway: "Exploring how structured code analysis and AI can turn a repository into useful technical documentation."
-    role: "Architecture · Code Analysis · AI Integration"
+    role: Designed the system, built the logic, etc.
     period: 2026
-    status: In Progress
+    status: Completed
     tags:
     - AI
     - Code Analysis
@@ -216,7 +216,9 @@ projects:
     - - Repository Analysis
       - Analyzes individual source files and combines their summaries into a structured repository report.
     - - AI Documentation
-      - Uses local AI models to transform repository information into a coherent GitHub README.
+      - Uses Gemini API to transform repository information into a coherent GitHub README.
+    - - Reference Consideration
+      - Convert reference files into markdown, and sends it to the AI.
 
   - slug: dayline
     number: "P-04"
