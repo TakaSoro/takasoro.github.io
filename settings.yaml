@@ -234,7 +234,9 @@ projects:
       - Journal
       - Timeline
       - Productivity
-    links: []
+    links:
+      - - GitHub
+        - https://github.com/TakaSoro/Dayline
     details:
     - - Core
       - Write markdown entries, analyze them with Gemini to extract activities, and visualize your daily timeline.
@@ -287,7 +289,7 @@ home:
     - label: Research
       title: Math, CS, DS
       desc: Colonel Blotto Game, Cybercrime Prediction
-    - label: PS Problems
+    - label: Problems
       title: 1 Authored · 3 Reviewed
       desc: SciOI, SciCom Mini Contest
 

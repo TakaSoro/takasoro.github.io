@@ -267,7 +267,7 @@ export function renderHonors() {
 
       <section class="content-section reveal">
         <div class="section-heading">
-          <h2><span class="section-code">//</span> Academic Timeline</h2>
+          <h2><span class="section-code">//</span> Timeline</h2>
         </div>
         <div class="history">
           ${timeline.map(([year, items]) => html`
