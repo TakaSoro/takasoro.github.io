@@ -206,7 +206,7 @@ export function renderProblem() {
   return html`
     <div class="container">
       <section class="page-header reveal">
-        <h1 class="heading-xl"><span class="heading-code">06 //</span> PROBLEM</h1>
+        <h1 class="heading-xl"><span class="heading-code">06 //</span> Problem</h1>
         <p class="description">Contest problem design, test case validation, and peer reviewing.</p>
       </section>
 
@@ -247,7 +247,7 @@ export function renderHonors() {
   return html`
     <div class="container">
       <section class="page-header reveal">
-        <h1 class="heading-xl"><span class="heading-code">07 //</span> HONORS</h1>
+        <h1 class="heading-xl"><span class="heading-code">07 //</span> Honors</h1>
         <p class="description">Awards, academic achievements, and certifiable evidence.</p>
       </section>
 
@@ -301,7 +301,7 @@ export function renderLogList() {
   return html`
     <div class="container">
       <section class="page-header reveal">
-        <h1 class="heading-xl"><span class="heading-code">05 //</span> LOG_STREAM</h1>
+        <h1 class="heading-xl"><span class="heading-code">05 //</span> Log</h1>
         <p class="description">Thoughts, research notes, and mathematical logs.</p>
       </section>
       <section class="content-section reveal">
