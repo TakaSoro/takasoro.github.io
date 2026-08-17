@@ -2,6 +2,12 @@ import { html, escape } from './utils.js';
 import { state } from './state.js';
 import { getPost } from './posts.js';
 
+const options = {
+  throwOnError: false
+};
+
+marked.use(markedKatex(options));
+
 export function renderTags(tags = []) {
   if (!tags.length) return '';
   return html`<div class="tags">${tags.map(tag => `<span class="tag">${escape(tag)}</span>`).join('')}</div>`;
