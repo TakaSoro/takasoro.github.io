@@ -244,6 +244,46 @@ projects:
       - Explore activity history through an interactive timeline.
     - - Entries
       - Create, edit, and browse daily journal entries.
+      
+  - slug: secret
+    number: "P-05"
+    category: Secret
+    title: Secret
+    tagline: 
+    summary: 
+    takeaway: ""
+    role: ""
+    period: 2026
+    status: In Progress
+    tags:
+      - 
+    links:
+      - - 
+    details:
+    - - 
+
+  - slug: room-assign
+    number: "P-06"
+    category: School
+    title: Room Assignment System
+    tagline: Assign a room for each student
+    summary: App that assigns each student a room based on data
+    takeaway: ""
+    role: ""
+    period: 2025.1
+    status: Completed
+    tags:
+      - 
+    links:
+      - - GitHub
+        - https://github.com/TakaSoro/RoomAssignmentSystem
+    details:
+    - - Room Assignment
+      - 
+    - - Sign Up / Login
+      - 
+    - - (Virtual) Sensor based Data Collection and Analysis
+      - 
 
 labs:
   - slug: mvp-predict
