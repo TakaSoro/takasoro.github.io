@@ -35,6 +35,15 @@ I'm posting this in advance because I have to go to school and won't have much t
 - Reference Option
 - Preferred Style Option
 
+# Room Assignment System
+
+## Newly Uploaded
+
+## Features
+- Sign Up / Login
+- Room Assignment
+- Sensor Data Analysis
+
 ## Fixes
 
 ## Etc
