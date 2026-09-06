@@ -1,63 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TakaSoro's Portfolio</title>
-  <meta name="theme-color" content="#0f0f10" />
-  <meta property="og:title" content="TakaSoro's Portfolio" />
-  <meta property="og:description" content="Math · CS · DS" />
+  <title>Melphin · Developer & Researcher Portfolio</title>
+  <meta name="theme-color" content="#08090D" />
+  <meta name="description" content="Melphin - Seoul Science High School student specializing in Mathematics, Computer Science, and Data Science." />
+  <meta property="og:title" content="Melphin's Portfolio" />
+  <meta property="og:description" content="Math · CS · Data Science · Game Theory · Optimization" />
   <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#08090D',
+            card: '#12151E',
+            primary: '#F3F4F6',
+            secondary: '#9CA3AF',
+            muted: '#6B7280',
+          },
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          animation: {
+            'spin-slow': 'spin 8s linear infinite',
+            'fade-in': 'fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(6px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX & Marked CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css">
   <script src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked@18.0.7/lib/marked.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked-katex-extension@5.1.10/lib/index.umd.min.js"></script>
+
+  <!-- Custom Core Styles -->
+  <link rel="stylesheet" href="./styles.css" />
+  
   <script defer type="module" src="./js/main.js"></script>
 </head>
-<body>
-  <header class="top-bar">
-    <div class="top-wrapper">
-      <a class="logo-group" href="#/home" aria-label="Home">
-        <span class="logo-badge">TS</span>
-        <span class="logo-text">
-          <strong>TakaSoro</strong>
-        </span>
+<body class="text-zinc-100 font-sans min-h-screen flex flex-col selection:bg-cyan-500/30 selection:text-cyan-200 relative overflow-x-hidden"
+  <!-- Persistent Glassmorphism Top Navigation Bar -->
+  <header class="sticky top-0 z-50 w-full backdrop-blur-xl bg-[#08090D]/80 border-b border-white/[0.08] transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo & Live Status -->
+      <a href="#/home" class="flex items-center gap-3 group focus:outline-none" aria-label="Melphin Home">
+        <div class="w-9 h-9 bg-cyan-500 flex items-center justify-center font-mono font-bold text-sm text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+          
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-sm text-white tracking-tight">
+            Melphin
+          </span>
+          <span class="flex items-center gap-1.5 text-[10px] text-zinc-400 font-mono">
+            SSHS
+          </span>
+        </div>
       </a>
 
-      <nav class="main-nav" aria-label="Major Page">
-        <a href="#/home" data-route="home" route="home"><span class="nav-number">01</span>Home</a>
-        <a href="#/research" data-route="research" route="research"><span class="nav-number">02</span>Research</a>
-        <a href="#/projects" data-route="projects" route="projects"><span class="nav-number">03</span>Projects</a>
-        <a href="#/labs" data-route="labs" route="labs"><span class="nav-number">04</span>Labs</a>
-        <a href="#/log" data-route="log" route="log"><span class="nav-number">05</span>Log</a>
-        <a href="#/problem" data-route="problem" route="problem"><span class="nav-number">06</span>Problem</a>
-        <a href="#/honors" data-route="honors" route="honors"><span class="nav-number">07</span>Honors</a>
+      <!-- Desktop Dynamic Navigation Bar (Scrollable / Segmented) -->
+      <nav class="hidden lg:flex items-center gap-1 p-1 bg-white/[0.03] border border-white/[0.06] backdrop-blur-md overflow-x-auto text-xs font-medium" aria-label="Main Navigation">
+        <a href="#/about" data-route="about" class="nav-item px-3 py-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-white/[0.06] transition-all">About</a>
+        <a href="#/works" data-route="works" class="nav-item px-3 py-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-white/[0.06] transition-all">Works</a>
+        <a href="#/contribute" data-route="contribute" class="nav-item px-3 py-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-white/[0.06] transition-all">Contribution</a>
+        <a href="#/reading" data-route="reading" class="nav-item px-3 py-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-white/[0.06] transition-all">Reading</a>
+        <a href="#/log" data-route="log" class="nav-item px-3 py-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-white/[0.06] transition-all">Log</a>
+        <a href="#/problem" data-route="problem" class="nav-item px-3 py-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-white/[0.06] transition-all">Problem</a>
       </nav>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-nav-drawer" class="hidden lg:hidden border-t border-white/[0.08] bg-[#08090D]/95 backdrop-blur-2xl px-4 py-4 space-y-1">
+      <div class="grid grid-cols-2 gap-1.5 text-xs font-medium">
+        <a href="#/about" data-route="about" class="px-3 py-2 text-zinc-400 hover:text-zinc-100 hover:bg-white/5">About</a>
+        <a href="#/works" data-route="works" class="px-3 py-2 text-zinc-400 hover:text-zinc-100 hover:bg-white/5">Works</a>
+        <a href="#/contribute" data-route="contribute" class="px-3 py-2 text-zinc-400 hover:text-zinc-100 hover:bg-white/5">Contribution</a>
+        <a href="#/reading" data-route="reading" class="px-3 py-2 text-zinc-400 hover:text-zinc-100 hover:bg-white/5">Reading</a>
+        <a href="#/log" data-route="log" class="px-3 py-2 text-zinc-400 hover:text-zinc-100 hover:bg-white/5">Log</a>
+        <a href="#/problem" data-route="problem" class="px-3 py-2 text-zinc-400 hover:text-zinc-100 hover:bg-white/5">Problem</a>
+      </div>
     </div>
   </header>
 
-  <main class="main-content">
-    <div id="app" class="content-area" tabindex="-1">
-      <section id="view" class="dynamic-view" aria-live="polite"></section>
+  <!-- Main View Container -->
+  <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <div id="app" class="focus:outline-none" tabindex="-1">
+      <section id="view" class="dynamic-view"></section>
     </div>
-
-    <footer class="page-footer">
-      <div class="footer-wrapper">
-        <span>TakaSoro · Math · CS · DS</span>
-        <div class="social-links">
-          <a href="https://github.com/TakaSoro" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
-      </div>
-    </footer>
   </main>
 
+  <!-- Persistent Glassmorphism Footer -->
+  <footer class="w-full border-t border-white/[0.08] bg-[#08090D]/80 backdrop-blur-xl py-8 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
+      
+      <div class="flex items-center gap-3">
+        <span class="font-semibold">Melphin</span>
+        <span class="text-zinc-600">·</span>
+        <span>Seoul Science High School</span>
+        <span class="text-zinc-600">·</span>
+        <span>Math · CS · DS</span>
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex items-center gap-4 text-zinc-400">
+        <a href="https://github.com/Melphin" target="_blank" rel="noreferrer" class="hover:text-cyan-400 transition-colors" aria-label="GitHub">
+          <i data-lucide="folder-git" class="w-4 h-4"></i>
+        </a>
+        <a href="https://doj.kr/en/user/melphin" target="_blank" rel="noreferrer" class="hover:text-cyan-400 transition-colors" aria-label="DOJ">
+          <i data-lucide="code-2" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
   <noscript>
-    <div class="no-js-warning">
-      This is a JavaScript-based portfolio. Please enable JavaScript in your browser to view the content.
+    <div class="p-4 bg-red-900/50 text-red-200 text-center text-sm">
+      This portfolio relies on JavaScript for routing and dynamic rendering. Please enable JavaScript to explore the full site.
     </div>
   </noscript>
 </body>

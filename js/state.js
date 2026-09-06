@@ -1,12 +1,15 @@
 export const state = {
   config: {},
   endpoints: {},
-  works: { projects: [], research: [], labs: [] },
-  workMap: {},
-  typeMap: {},
+  works: [],
+  slugMap: {},
+  contributions: [],
+  reading: [],
+  about: [],
   posts: [],
   postCache: {},
   filter: 'All',
-  categories: ['research', 'labs', 'projects'],
+  bookFilter: 'All',
+  contactModalOpen: false,
   ready: false
 };

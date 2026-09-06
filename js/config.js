@@ -6,22 +6,12 @@ export async function fetchConfig() {
     const text = await fetch('settings.yaml').then(r => r.text());
     state.config = load(text);
     state.endpoints = state.config.routes || {};
-    state.works.projects = state.config.projects || [];
-    state.works.research = state.config.research || [];
-    state.works.labs = state.config.labs || [];
+    state.works = state.config.works || [];
+    state.slugMap = Object.fromEntries(state.works.map(x => [x.slug, x]));
+    state.contributions = state.config.contributions || [];
+    state.reading = state.config.reading || [];
+    state.about = state.config.about || [];
     state.filter = state.config.defaultGroup || 'All';
-    const combined = [
-      ...state.works.projects.map(p => [p.slug, p]),
-      ...state.works.research.map(p => [p.slug, p]),
-      ...state.works.labs.map(p => [p.slug, p])
-    ];
-    state.workMap = Object.fromEntries(combined);
-    const typeMap = [
-      ...state.works.projects.map(p => [p.slug, 'projects']),
-      ...state.works.research.map(p => [p.slug, 'research']),
-      ...state.works.labs.map(p => [p.slug, 'labs'])
-    ];
-    state.typeMap = Object.fromEntries(typeMap);
   } catch (err) {
     console.error('Config load failed:', err);
   }

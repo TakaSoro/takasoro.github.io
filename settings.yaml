@@ -1,13 +1,15 @@
 routes:
   home: Home
-  labs: Labs
-  projects: Projects
-  research: Research
+  works: Works
+  tech: Tools & Technologies
+  contribute: My Contributions
+  reading: Books & Papers I've Read
+  about: About
   log: Log
   problem: Problem
   honors: Honors
 
-research:
+works:
   - slug: colonel-blotto
     number: "R-01"
     category: Math & Research
@@ -62,23 +64,21 @@ research:
     tags:
       - Wythoff
       - Game Theory
+      - Discrete Math
     links: []
     details:
       - - Goal
-        -
-          >
+        - >
           Define a generalized P(x)-Wythoff's Game in which the minimum number of removable stones depends on the size of the other stack,
           and determine the P-position sets for the cases P(x) = x^n + 1 and P(x) = nx + k.
       - - Process
-        -
-          >
+        - >
           The P(x)-Wythoff's Game was defined and its correspondence with rook movements on a chessboard was established.
           P-position sets were then constructed and proved using functions and set definitions.
           For x^n + 1, the P-position structure was generalized for n > 1, while for nx + k, the P-position was determined for 1 ≤ k ≤ n.
           Computational simulations were additionally used to investigate and visualize the P-positions and to formulate conjectures for k > n.
       - - Conclusion
-        -
-          >
+        - >
           The P-position sets were completely characterized for x^n + 1 (n > 1) and nx + k (1 ≤ k ≤ n).
           The boundary of the P-position region for x^n + 1 was shown to be closely related to
           y = x^n + √[n]{x}, while computational experiments for k > n led to several conjectures
@@ -106,7 +106,7 @@ research:
     details:
       - - Goal
         - >
-          TODO
+          Formulate dynamical gravity transformations across regular n-polygonal lattice graphs, analyzing limit orbits and invariants under geometric reflection groups.
       - - Process
         - >
           The regular polygonal lattice and the gravity transformation for regular polygonal lattice were defined,
@@ -118,7 +118,6 @@ research:
           related theorems and algorithms, and presented a theory that can be extended to
           general n-gonal lattices.
 
-projects:
   - slug: crime-predict
     number: "P-01"
     category: DS
@@ -206,19 +205,20 @@ projects:
     period: 2026
     status: Completed
     tags:
-    - AI
-    - Code Analysis
-    - GitHub
+      - AI
+      - Code Analysis
+      - GitHub
+      - Gemini API
     links:
       - - GitHub
         - https://github.com/TakaSoro/Readmify
     details:
-    - - Repository Analysis
-      - Analyzes individual source files and combines their summaries into a structured repository report.
-    - - AI Documentation
-      - Uses Gemini API to transform repository information into a coherent GitHub README.
-    - - Reference Consideration
-      - Convert reference files into markdown, and sends it to the AI.
+      - - Repository Analysis
+        - Analyzes individual source files and combines their summaries into a structured repository report.
+      - - AI Documentation
+        - Uses Gemini API to transform repository information into a coherent GitHub README.
+      - - Reference Consideration
+        - Convert reference files into markdown, and sends it to the AI.
 
   - slug: dayline
     number: "P-04"
@@ -226,66 +226,51 @@ projects:
     title: Dayline
     tagline: A Journal Built Around Time
     summary: A timeline-based journal for recording and revisiting daily experiences, thoughts, and progress.
-    takeaway: ""
-    role: ""
+    takeaway: "Designed an intuitive chronological interface for life journaling."
+    role: "Full-stack developer & UI designer"
     period: 2026
     status: Completed
     tags:
       - Journal
       - Timeline
       - Productivity
+      - Web
     links:
       - - GitHub
         - https://github.com/TakaSoro/Dayline
     details:
-    - - Core
-      - Write markdown entries, analyze them with Gemini to extract activities, and visualize your daily timeline.
-    - - Visualization
-      - Explore activity history through an interactive timeline.
-    - - Entries
-      - Create, edit, and browse daily journal entries.
-      
-  - slug: secret
-    number: "P-05"
-    category: Secret
-    title: Secret
-    tagline: 
-    summary: 
-    takeaway: ""
-    role: ""
-    period: 2026
-    status: In Progress
-    tags:
-      - 
-    links:
-      - - 
-    details:
-    - - 
+      - - Core
+        - Write markdown entries, analyze them with Gemini to extract activities, and visualize your daily timeline.
+      - - Visualization
+        - Explore activity history through an interactive timeline.
+      - - Entries
+        - Create, edit, and browse daily journal entries.
 
   - slug: room-assign
     number: "P-06"
     category: School
     title: Room Assignment System
     tagline: Assign a room for each student
-    summary: App that assigns each student a room based on data
-    takeaway: ""
-    role: ""
+    summary: Optimization app that assigns student dormitory accommodations based on schedule and preference heuristics.
+    takeaway: "Applied graph bipartite matching and constraint optimization to real-world school operations."
+    role: "Algorithm and system architect"
     period: 2025.1
     status: Completed
     tags:
-      - 
+      - Optimization
+      - Graph Theory
+      - School Tools
     links:
       - - GitHub
         - https://github.com/TakaSoro/RoomAssignmentSystem
     details:
-    - - Room Assignment
-      - 
-    - - Sign Up / Login
-      - 
-    - - (Virtual) Sensor based Data Collection and Analysis
-      - 
+      - - Room Assignment
+        - Implemented Hungarian / Min-Cost Max-Flow algorithms for fair allocation.
+      - - Sign Up / Login
+        - Secure student credential verification and state synchronization.
+      - - Data Analysis
+        - Evaluated satisfaction metrics and room utilization distribution.
 
-labs:
   - slug: mvp-predict
     number: "L-01"
     category: DS
@@ -320,18 +305,82 @@ labs:
           identify influential performance data, and analyze how player statistics and team
           success affect MVP voting.
 
+contributions:
+#  - title: "MathGM Progression Engine"
+#    repo: "TakaSoro/MathGM"
+#    category: "Gamification / Web"
+#    featured: true
+#    summary: >
+#      Engineered an autonomous season simulation and player progression engine that converts mathematical problem-solving logs into persistent in-game player skill trees, attributes, and match results.
+#    impact: "Built zero-dependency state machine with IndexedDB auto-save and zero performance lag during 100-season batch simulations."
+#    tags: ["JavaScript", "IndexedDB", "Simulation", "Canvas"]
+#    stars: 38
+#    forks: 7
+#    links:
+#      - - GitHub Repo
+#       - https://github.com/TakaSoro/MathGM
+#      - - Live Demo
+#        - https://takasoro.github.io/MathGM
+#    mockup:
+#      type: "code"
+#      badge: "Simulation Core v2.4"
+#      snippet: |
+#        class SimulationEngine {
+#          simulateSeason(player, solvedMathProblems) {
+#            const exp = calculateExpCurve(solvedMathProblems);
+#            player.attributes.logic += exp * 0.45;
+#            player.attributes.speed += exp * 0.35;
+#            return this.runChampionship(player);
+#          }
+#        }
+
+reading:
+  - title: "The Art of Computer Programming Vol. 1"
+    author: "Donald E. Knuth"
+    status: "Completed"
+    rating: 5
+    year: "2023"
+    genre: "Computer Science"
+    category: "CS"
+    coverTag: "TAOCP"
+    summary: 
+    takeaway: 
+    quote: 
+
+  - title: "Generatingfunctionology"
+    author: "Herbert Wilf"
+    status: "In Progress"
+    rating: 
+    year: "2026"
+    genre: "Mathematics"
+    category: "Math"
+    coverTag: " "
+    
+  - title: "Computer Networking: A Top-Down Approach"
+    author: "Jim Kurose, Keith W. Ross"
+    status: "Planned"
+    rating: 
+    year:
+    genre: "Network"
+    category: "CS"
+    coverTag: " "
+
+about:
+  name: "Melphin"
+  title: "High School Researcher & Systems Developer"
+  school: "Seoul Science High School (SSHS)"
+  tagline: "Exploring the intersections of Game Theory, Discrete Geometry, High-Performance Systems, and Machine Learning."
+  location: "Seoul, Republic of Korea"
+  about: >
+    I am a passionate student researcher at Seoul Science High School specializing in Mathematics, Computer Science, and Data Science. 
+    My academic work spans continuous game-theoretic optimizations (Colonel Blotto Game), invariant dynamical lattice systems, and machine learning models for socio-economic forecasting.
+    When not proving theorems or authoring contest problems for SciOI/SciCom, I build gamified education tools, AI developer utilities, and modern web software.
+
 home:
   selection:
     - colonel-blotto
     - crime-predict
     - mathgm
-  data:
-    - label: Research
-      title: Math, CS, DS
-      desc: Colonel Blotto Game, Cybercrime Prediction
-    - label: Problems
-      title: 1 Authored · 3 Reviewed
-      desc: SciOI, SciCom Mini Contest
 
 problem:
   contests:
@@ -339,24 +388,24 @@ problem:
       - SciOI 2025
       - Reviewer
       - 3 Reviewed
-      - "#/setting"
+      - "#/problem"
     - - 2026.07
       - SciCom Mini Contest 1
       - Setter
       - 1 Authored
       - https://doj.kr/ko/categories/school/sshs/minicontest/minicontest1
   data:
-    - label: Setting
+    - label: Problem Setting
       title: 1 Authored
-      desc: SciCom Mini Contest
-    - label: Review
+      desc: SciCom Mini Contest (DOJ Platform)
+    - label: Peer Review
       title: 3 Reviewed
-      desc: SciOI
+      desc: SciOI Contest Quality Assurance
 
 honors:
   timeline:
-    - - Middle School 2nd Grade  · 2023
+    - - Middle School 2nd Grade · 2023
       - - - Seoul Science High School Center for Gifted Youth
-          - Math Research Silver
+          - Math Research Silver Award (Game Theory & Optimization)
 
 defaultGroup: All
